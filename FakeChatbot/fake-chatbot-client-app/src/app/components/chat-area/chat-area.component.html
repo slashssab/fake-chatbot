@@ -1,0 +1,22 @@
+<div class="chat-area">
+  @for(message of messageCollection; track message.id){
+  <div class="message" [ngClass]="{from: message.author === 'chat',to: message.author === 'user'}">
+    {{ message.text }} {{ message.timestamp | date: 'dd/MM/yyyy'}}
+    @if(message.mark){
+      @if(message.mark===0) {
+        <mat-icon class="mat-18">thumb_up</mat-icon>
+      }
+      @else {
+        <mat-icon class="mat-18">thumb_down</mat-icon>
+      }
+    }
+  </div>
+  }
+  <form [formGroup]="userInputFormGroup">
+    <mat-form-field appearance="outline">
+      <input matInput formControlName="userInputControl">
+    </mat-form-field>
+  </form>
+
+  <button mat-raised-button (click)="sendMessage()">Send</button>
+</div>

@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FakeChatbot.Database\FakeChatbot.Database.csproj" />
+    <ProjectReference Include="..\FakeChatbot.Domain\FakeChatbot.Domain.csproj" />
+    <ProjectReference Include="..\FakeChatbot.Resources\FakeChatbot.Resources.csproj" />
+  </ItemGroup>
+
+</Project>
